@@ -221,3 +221,44 @@ body {
 .task-delete-button:hover {
   background-color: #f56565;
 }
+
+/* ==========================================
+   空状態メッセージ
+   ========================================== */
+.task-empty {
+  padding: 16px;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.95rem;
+  list-style: none;
+}
+
+/* ==========================================
+   インライン編集入力欄
+   ========================================== */
+.task-edit-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 2px solid #4299e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  min-width: 0;
+}
+
+.task-save-button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #68d391;
+  color: #22543d;
+  transition: background-color 0.2s;
+}
+
+.task-save-button:hover {
+  background-color: #48bb78;
+}
