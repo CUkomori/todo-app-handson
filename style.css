@@ -1,0 +1,223 @@
+/* ==========================================
+   リセット・ベーススタイル
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   アプリ全体のレイアウト
+   ========================================== */
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* ==========================================
+   ヘッダー
+   ========================================== */
+.app-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c5282;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   タスク入力セクション
+   ========================================== */
+.task-input-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.task-input:focus {
+  border-color: #4299e1;
+}
+
+.task-input::placeholder {
+  color: #a0aec0;
+}
+
+.task-add-button {
+  padding: 10px 20px;
+  background-color: #4299e1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.task-add-button:hover {
+  background-color: #3182ce;
+}
+
+.task-add-button:active {
+  background-color: #2b6cb0;
+}
+
+/* ==========================================
+   タスク一覧セクション
+   ========================================== */
+.task-list-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-list-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ==========================================
+   タスクアイテム
+   ========================================== */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.task-item:hover {
+  background-color: #edf2f7;
+}
+
+/* 完了済みタスクのスタイル（is- プレフィックス） */
+.task-item.is-completed {
+  background-color: #f0fff4;
+  border-color: #c6f6d5;
+  opacity: 0.75;
+}
+
+/* ==========================================
+   タスクラベル（チェックボックス＋テキスト）
+   ========================================== */
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #48bb78;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-text {
+  font-size: 1rem;
+  color: #2d3748;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 完了済みタスクのテキスト（打ち消し線） */
+.task-item.is-completed .task-text {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+/* ==========================================
+   タスク操作ボタン（編集・削除）
+   ========================================== */
+.task-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.task-edit-button,
+.task-delete-button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.task-edit-button {
+  background-color: #ecc94b;
+  color: #744210;
+}
+
+.task-edit-button:hover {
+  background-color: #d69e2e;
+}
+
+.task-delete-button {
+  background-color: #fc8181;
+  color: #742a2a;
+}
+
+.task-delete-button:hover {
+  background-color: #f56565;
+}
